@@ -65,9 +65,7 @@ public class MySolution {
         while (stat) {
             try {
                 checkOutDate = getDateAsString(sc);
-                if (checkOutDate.isAfter(LocalDate.now().plusYears(1)))
-                    throw new BadInputException("You cannot schedule a rental more than a year ahead of time.");
-                    /* 
+                /* 
                     No Specification to not be able to post date rentals, so have commented this check out.
                 else if (checkOutDate.isBefore(LocalDate.now()))
                     throw new BadInputException("You cannot schedule a rental to begin in the past)");
@@ -76,9 +74,9 @@ public class MySolution {
             } catch (DateTimeParseException p) {
                 System.out.println("Checkout Date Format invalid, please Enter Checkout date in proper format");
 
-            } catch (BadInputException b) {
+            } /*catch (BadInputException b) {
                 System.out.println(b.getMessage());
-            }
+            }*/
 
         }
 
